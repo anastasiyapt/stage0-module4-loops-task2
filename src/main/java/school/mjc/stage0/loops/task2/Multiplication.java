@@ -2,22 +2,33 @@ package school.mjc.stage0.loops.task2;
 
 public class Multiplication {
     public void printMultiplied(int multiplyByAndToInclusive) {
-        int count = 0;
-        if (multiplyByAndToInclusive < 0){
-            while (count >= multiplyByAndToInclusive){
-                System.out.println((-count) * multiplyByAndToInclusive);
-                count --;
-            }
-        } else if (multiplyByAndToInclusive == 0){
-            return;
+      /*
+      Write a program that will write to console
+      multiplied numbers by input from zero to the number from method arguments using while loop,
+      each on new line(program should also be able to work with negatives):
 
-        }else{
-            while (count <= multiplyByAndToInclusive) {
-                System.out.println(count * multiplyByAndToInclusive);
-                count++;
-            }
-        }
+       */
 
+       int count = 0;
+       int number = 0;
+       if(multiplyByAndToInclusive < 0){
+           while(count >= multiplyByAndToInclusive){
+               number = (-count) * multiplyByAndToInclusive;
+               System.out.println(number);
+               count--;
+
+
+           }
+           return;
+       }
+       while(count <= multiplyByAndToInclusive){
+           if (multiplyByAndToInclusive == 0){
+               return;
+           }
+           number = count * multiplyByAndToInclusive;
+           System.out.println(number);
+           count++;
+       }
     }
 
 }
